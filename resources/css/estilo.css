@@ -68,6 +68,7 @@ main {
     width: 60px !important;
     margin-right: 10px;
     margin-left: 10px;
+    border-radius: 30%;
 }
 
 /*Editando as noticias na tela inicio*/
@@ -206,19 +207,19 @@ main {
     background-color: #f5f5f5;
 }
 
-/* Mostra o menu ao passar o mouse */
+/* mostra o menu quando passa o mouse */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 
-/* Editando as informações dos pets */
+/* estilização dos pets do campus */
 .petcard {
-    background-color: #f68a47;
-    border: 2px solid #7fb7ff;
-    border-radius: 20px;
-    margin-top: 15rem !important;
-    margin-bottom: 10rem !important;
+    background-color: #c4e74b;
+    border: 5px solid #ff973a;
+    border-radius: 40px;
+    text-indent: 1rem;
+    margin-top: 6rem !important;
 }
 
 .petheader {
@@ -228,22 +229,21 @@ main {
 .petheader h4{
     color: white;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .petdesc {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-indent: 3rem;
     margin: 0 10px 10px 10px;
 }
 
-.Pandora {
-    width: 2000px;
+.fotopets {
+    width: 75rem;
     margin: 0 20px 20px 20px;
 }
 
-/* Editando o Footer */
+/* estilização do footer */
 
 .cepetz-footer {
     background-color: #ff993f;
@@ -326,3 +326,256 @@ main {
     font-family: 'Jua';
     font-size: 4rem !important;
 }
+
+/* form cadastro */
+
+.form-card {
+    margin-top: 4rem;
+    background-color: #B7DA4E;
+    border-radius: 40px;
+    width: 100%;
+    color: white;
+}
+
+.input-style {
+    background-color: #7eb7ff !important;
+    border: none !important;
+    border-radius: 40px !important;
+    font-weight: 2rem;
+    padding: 10px 20px;
+}
+
+.input-style::file-selector-button {
+    background-color: #7eb7ff;
+    border: none;
+    border-radius: 20px;
+    font-weight: 2rem;
+    padding: 5px 15px;
+}
+
+.btn-orange {
+    background-color: #f7905c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+.btn-orange:hover {
+    background-color: #e6773d;
+}
+
+/* Fundo suave e acolhedor */
+.sobre-bg {
+    background-color: #ffd5b8;
+}
+
+/* Título principal */
+.titulo-sobre {
+    font-family: 'Poppins', sans-serif;
+    color: #00285b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Bloco de texto */
+.texto-sobre {
+    background-color: #ffffffc7;
+    border-left: 8px solid #f7905c;
+    font-size: 1.1rem;
+    color: #00285b;
+    line-height: 1.8;
+}
+
+/* Galeria de imagens */
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem-frame {
+    background-color: #fff;
+    border: 3px solid #f7905c;
+    padding: 10px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.imagem-frame:hover {
+    transform: scale(1.05);
+}
+
+.sombra-imagem {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de doação */
+.btn-doar {
+    background-color: #f7905c;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(247, 144, 92, 0.5);
+}
+
+.btn-doar:hover {
+    background-color: #e67840;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .texto-sobre {
+        font-size: 1rem;
+    }
+
+    .titulo-sobre {
+        font-size: 1.6rem;
+    }
+
+    .imagem-frame {
+        margin-bottom: 20px;
+    }
+}
+
+/* estilização cinoterapia*/
+
+/* Títulos */
+.titulo-cino, .subtitulo-cino {
+    margin-top: 4rem;
+}
+
+/* Texto principal */
+.texto-cino {
+    font-size: 1.1rem;
+    text-align: justify;
+    background-color: #ffffffcc;
+    border-left: 6px solid #f7905c;
+    border-radius: 40px;
+    padding: 15px 20px;
+    margin-bottom: 1rem;
+    text-indent: 2rem;
+}
+
+.lista-cino li {
+    margin-bottom: 8px;
+}
+
+/* Imagens */
+.imagem-cino img {
+    border: 4px solid #f7905c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sombra-cino img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão final */
+.btn-orange {
+    background-color: #f7905c;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(247, 144, 92, 0.5);
+}
+
+.btn-orange:hover {
+    background-color: #e67840;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .texto-cino {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    .titulo-cino, .subtitulo-cino {
+        font-size: 1.4rem;
+    }
+
+    .imagem-cino {
+        margin-top: 20px;
+    }
+}
+
+
+/* equipe cepetz 2025 */
+
+/* Título principal */
+.titulo-equipe {
+    margin-top: 4rem;
+    letter-spacing: 1px;
+}
+
+/* Cards individuais */
+.card-equipe {
+    background: transparent;
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.card-equipe:hover {
+    transform: translateY(-8px);
+}
+
+/* Foto circular */
+.foto-equipe {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f7905c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.foto-equipe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-equipe:hover .foto-equipe img {
+    transform: scale(1.08);
+}
+
+/* Cargos e nomes */
+.cargo-equipe {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f7905c;
+    letter-spacing: 1px;
+}
+
+.nome-equipe {
+    font-weight: 600;
+    color: #00285b;
+    margin-bottom: 0;
+}
+
+/* Destaque especial */
+.destaque {
+    border: 2px solid #bb8cff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .foto-equipe {
+        width: 160px;
+        height: 160px;
+    }
+
+    .titulo-equipe {
+        font-size: 1.6rem;
+    }
+}
+
