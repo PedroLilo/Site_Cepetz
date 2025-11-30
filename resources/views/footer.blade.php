@@ -1,6 +1,6 @@
 <footer class="cepetz-footer">
     <div class="cepetz-footer-top">
-        <img src="/storage/images/logo-footer.png" alt="Logo Cepetz" class="footer-logo">
+        <img src="/storage/images/logo.png" alt="Logo Cepetz" class="footer-logo">
         <div class="footer-left">
             <h3 class="titleFooter">CEPETz</h3>
             <p>Um projeto de extensão desenvolvido pelo CEFET-MG campus Varginha desde 2021.</p>
@@ -26,9 +26,9 @@
             <h4 class="titleFooter">Galeria</h4>
             <div class="gallery">
                 <img class="cachorros" src="/storage/images/pet1.jpg" alt="Pet">
-                <img class="cachorros" src="/storage/images/pet1.jpg" alt="Pet">
-                <img class="cachorros" src="/storage/images/pet1.jpg" alt="Pet">
-                <img class="cachorros" src="/storage/images/pet1.jpg" alt="Pet">
+                <img class="cachorros" src="/storage/images/pet2.jpg" alt="Pet">
+                <img class="cachorros" src="/storage/images/pet3.jpg" alt="Pet">
+                <img class="cachorros" src="/storage/images/pet4.jpg" alt="Pet">
             </div>
         </div>
 

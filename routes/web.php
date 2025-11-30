@@ -2,10 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controllerCepetz;
+use App\Http\Controllers\NoticiaController;
 
-Route::get('/', function () {
-    return view('index');
-})->name('inicio');
+Route::get('/', [NoticiaController::class, 'index'])->name('inicio');
 
 Route::get('/cepetz/logar', function () {return view('logar'); })->name('logar');
 Route::post('/logar', [controllerCepetz::class, 'logar'])->name('logarUsuario');
@@ -18,3 +17,5 @@ Route::get('/cepetz/cinoterapia', function () {return view('cinoterapia'); })->n
 
 /* somente adm's */
 Route::get('/cepetz/cadastro', function () {return view('cadastrar'); })->name('cadastrar');
+
+Route::post('/cadastrarnoticia', [NoticiaController::class, 'store'])->name('cadastrarnoticia');

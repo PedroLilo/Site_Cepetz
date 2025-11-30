@@ -4,7 +4,7 @@
 <div class="container d-flex justify-content-center align-items-center py-5">
     <div class="form-card p-5 shadow-lg">
         <h1 class="text-center mb-4 text-light">Cadastrar</h1>
-        <form action="{{ route('animais') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('cadastrarnoticia') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
@@ -23,6 +23,11 @@
             <div class="mb-3">
                 <label for="descricaocadastro" class="form-label  fw-semibold">Descrição</label>
                 <input type="text" class="form-control input-style" id="descricaocadastro" name="descricaocadastro" placeholder="Digite a descrição">
+            </div>
+
+            <div class="mb-3">
+                <label for="autor" class="form-label  fw-semibold">Autor</label>
+                <input type="text" class="form-control input-style" id="autor" name="autor" placeholder="Digite o autor">
             </div>
 
             <div class="mb-4">

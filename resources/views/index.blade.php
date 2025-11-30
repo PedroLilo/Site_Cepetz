@@ -6,99 +6,58 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4 shadow-sm noticiaCard">
-                    <div class="noticiaheader">
-                        <h3>TITULO</h3>
-                        <p>00/00/0000</p>
-                    </div>
-                    <div class="card-body text-center noticiadescricao">
-                        <p class="textnoticia">Lorem ipsum dolor sit amet. Notícia notícia notícia notícia notícia notícia notícia notícia?
-                            Notícia notícia notícia notícia notícia notícia notícia notícia notícia notícia. Notícia notícia</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver Mais
-                        </button>
-                    </div>
+<div class="container">
+    <div class="row">
+
+        @foreach ($noticias as $noticia)
+        <div class="col-md-4 mb-4">
+            <div class="card mb-4 shadow-sm noticiaCard">
+
+                <div class="noticiaheader">
+                    <h3>{{ $noticia->titulo }}</h3>
+                    <p>{{ $noticia->created_at->format('d/m/Y') }}</p>
+                </div>
+
+                @if ($noticia->imagem)
+                <img src="{{ asset('storage/' . $noticia->imagem) }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                @endif
+
+                <div class="card-body text-center noticiadescricao">
+                    <p class="textnoticia">{{ Str::limit($noticia->descricao, 120) }}</p>
+
+                    <button type="button" class="btn btn-secondary" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modal{{ $noticia->id }}">
+                        Ver Mais
+                    </button>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4 shadow-sm noticiaCard">
-                    <div class="noticiaheader">
-                        <h3>TITULO</h3>
-                        <p>00/00/0000</p>
+        </div>
+
+        {{-- MODAL --}}
+        <div class="modal fade" id="modal{{ $noticia->id }}" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ $noticia->titulo }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="card-body text-center noticiadescricao">
-                        <p class="textnoticia">Lorem ipsum dolor sit amet. Notícia notícia notícia notícia notícia notícia notícia notícia?
-                            Notícia notícia notícia notícia notícia notícia notícia notícia notícia notícia. Notícia notícia</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver Mais
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4 shadow-sm noticiaCard">
-                    <div class="noticiaheader">
-                        <h3>TITULO</h3>
-                        <p>00/00/0000</p>
-                    </div>
-                    <div class="card-body text-cente noticiadescricaor">
-                        <p class="textnoticia">Lorem ipsum dolor sit amet. Notícia notícia notícia notícia notícia notícia notícia notícia?
-                            Notícia notícia notícia notícia notícia notícia notícia notícia notícia notícia. Notícia notícia</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver Mais
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4 shadow-sm noticiaCard">
-                    <div class="noticiaheader">
-                        <h3>TITULO</h3>
-                        <p>00/00/0000</p>
-                    </div>
-                    <div class="card-body text-center noticiadescricao">
-                        <p class="textnoticia">Lorem ipsum dolor sit amet. Notícia notícia notícia notícia notícia notícia notícia notícia?
-                            Notícia notícia notícia notícia notícia notícia notícia notícia notícia notícia. Notícia notícia</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver Mais
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4 shadow-sm noticiaCard">
-                    <div class="noticiaheader">
-                        <h3>TITULO</h3>
-                        <p>00/00/0000</p>
-                    </div>
-                    <div class="card-body text-center noticiadescricao">
-                        <p class="textnoticia">Lorem ipsum dolor sit amet. Notícia notícia notícia notícia notícia notícia notícia notícia?
-                            Notícia notícia notícia notícia notícia notícia notícia notícia notícia notícia. Notícia notícia</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver Mais
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card mb-4 shadow-sm noticiaCard">
-                    <div class="noticiaheader">
-                        <h3>TITULO</h3>
-                        <p>00/00/0000</p>
-                    </div>
-                    <div class="card-body text-center noticiadescricao">
-                        <p class="textnoticia">Lorem ipsum dolor sit amet. Notícia notícia notícia notícia notícia notícia notícia notícia?
-                            Notícia notícia notícia notícia notícia notícia notícia notícia notícia notícia. Notícia notícia</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver Mais
-                        </button>
+
+                    <div class="modal-body">
+                        @if ($noticia->imagem)
+                        <img src="{{ asset('storage/' . $noticia->imagem) }}" class="img-fluid mb-3">
+                        @endif
+                        <p>{{ $noticia->descricao }}</p>
+                        <p>{{ $noticia->autor }}</p>
                     </div>
                 </div>
             </div>
         </div>
+        {{-- FIM MODAL --}}
+        @endforeach
+
     </div>
+</div>
+
 @endsection
 

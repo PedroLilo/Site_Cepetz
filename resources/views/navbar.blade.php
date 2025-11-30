@@ -16,6 +16,7 @@
         </div>
 
         <a class="navA" href="/cepetz/apoieSitio">Apoie o Sítio</a>
+        <a class="navA" href="/cepetz/cadastro">Cadastrar Notícia</a>
         <a class="navA" href="/cepetz/logar">Login</a>
     </div>
 </nav>
