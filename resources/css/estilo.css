@@ -300,49 +300,38 @@ main {
     margin: 0 20px 20px 20px;
 }
 
-/* estilização do footer */
-
+/* Estilização geral do footer */
 .cepetz-footer {
     background-color: #ff993f;
     color: white;
-    padding: 30px 20px 10px;
+    padding: 30px 20px;
 }
 
+/* Footer top */
 .cepetz-footer-top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
     gap: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
+/* Seção da esquerda */
+.footer-left, .footer-center, .footer-right {
     max-width: 250px;
+    flex: 1;
 }
 
+/* Logo do footer */
 .footer-logo {
-    width: 15rem;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-.footer-left h3 {
-    color: #FFA14A;
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.footer-center h4,
-.footer-right h4 {
-    color: #FFA14A;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
+/* Links de contato */
 .footer-center ul {
     list-style: none;
     padding: 0;
@@ -350,27 +339,32 @@ main {
 }
 
 .footer-center ul li {
-    margin-bottom: 5px;
     color: white;
-    text-decoration: none !important;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-decoration: none;
 }
 
+/* Galeria de imagens */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    gap: 15px;
 }
 
 .gallery img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 3%;
+    width: 110%;
+    border-radius: 8px;
 }
+
+
+/* Logo do CEFET */
 .footer-logo-cefet img {
     height: 10rem;
     margin-top: 2.5rem;
+    margin-right: 1.5rem;
 }
 
+/* Footer bottom */
 .cepetz-footer-bottom {
     text-align: center;
     font-size: 14px;
@@ -378,11 +372,51 @@ main {
     color: #fff;
 }
 
-.titleFooter{
-    color: #90d3fc !important;
-    font-family: 'Jua';
-    font-size: 4rem !important;
+/* Responsividade */
+@media (max-width: 768px) {
+    .cepetz-footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        max-width: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+@media (max-width: 480px) {
+    .footer-left, .footer-center, .footer-right {
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        width: 120px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo-cefet img {
+        height: 7rem;
+    }
+}
+
+/* Tipografia do título */
+.titleFooter {
+    color: #90d3fc !important;
+    font-family: 'Jua', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
 
 /* form cadastro */
 
@@ -637,13 +671,6 @@ main {
     margin-bottom: 0;
 }
 
-/* Destaque especial */
-.destaque {
-    border: 2px solid #bb8cff;
-    border-radius: 15px;
-    padding: 15px;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
     .foto-equipe {
@@ -659,7 +686,13 @@ main {
 /* Mantém todas as imagens da galeria com o mesmo tamanho */
 .img-galeria {
     width: 100%;
-    height: 500px; /* define altura fixa */
-    object-fit: cover; /* corta a imagem proporcionalmente para preencher o espaço */
 }
+
+.com-margem{
+    margin-top: 6rem;
+
+}
+
+
+/*sitio*/
 

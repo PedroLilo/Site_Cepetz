@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="container">
+<div class="container com-margem">
     <div class="row">
 
         @foreach ($noticias as $noticia)

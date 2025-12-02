@@ -25,10 +25,7 @@
         <div class="footer-right">
             <h4 class="titleFooter">Galeria</h4>
             <div class="gallery">
-                <img class="cachorros" src="/storage/images/pet1.jpg" alt="Pet">
-                <img class="cachorros" src="/storage/images/pet2.jpg" alt="Pet">
-                <img class="cachorros" src="/storage/images/pet3.jpg" alt="Pet">
-                <img class="cachorros" src="/storage/images/pet4.jpg" alt="Pet">
+                <img class="cachorros" src="/storage/images/galeria.png" alt="Pandora">
             </div>
         </div>
 
