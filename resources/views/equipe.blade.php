@@ -3,11 +3,18 @@
 @section('content')
 <div class="container-fluid equipe-bg py-5">
     <div class="container text-center">
-        <h1 class="fw-bold text-primary titulo-equipe mb-5">Equipe CEPETz 2025</h1>
+        <h1 class="fw-bold titulo-equipe mb-5">Equipe CEPETz 2025</h1>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="foto-equipe25">
+                    <img src="{{ asset('storage/images/equipe2025.jpg') }}" alt="Equipe 2025">
+                </div>
+            </div>
+        </div>
 
         <div class="row justify-content-center g-4">
 
-            <!-- COORDENADORA -->
             <div class="col-md-4 col-sm-6">
                 <div class="card-equipe">
                     <div class="foto-equipe">
@@ -18,7 +25,15 @@
                 </div>
             </div>
 
-            <!-- BOLSISTAS -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card-equipe">
+                    <div class="foto-equipe">
+                        <img src="{{ asset('storage/images/anavitoria.png') }}" alt="Ana Vitória">
+                    </div>
+                    <h6 class="cargo-equipe text-uppercase text-warning">Bolsista</h6>
+                    <h5 class="nome-equipe">Ana Vitória</h5>
+                </div>
+            </div>
             <div class="col-md-4 col-sm-6">
                 <div class="card-equipe">
                     <div class="foto-equipe">
@@ -29,17 +44,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="card-equipe destaque">
-                    <div class="foto-equipe">
-                        <img src="{{ asset('storage/images/anavitoria.png') }}" alt="Ana Vitória">
-                    </div>
-                    <h6 class="cargo-equipe text-uppercase text-warning">Bolsista</h6>
-                    <h5 class="nome-equipe">Ana Vitória</h5>
-                </div>
-            </div>
-
-            <!-- VOLUNTÁRIOS -->
+            
             @php
                 $voluntarios = [
                     ['nome' => 'Amanda Gabriela', 'img' => 'amandagabriela.png'],
@@ -47,7 +52,7 @@
                     ['nome' => 'Breno', 'img' => 'breno.png'],
                     ['nome' => 'Florênça', 'img' => 'florenca.png'],
                     ['nome' => 'Giovana', 'img' => 'giovana.png'],
-                    ['nome' => 'Giovanna', 'img' => 'giovanna.png'],
+                    ['nome' => 'Giovanna', 'img' => 'giovanna.jpg'],
                     ['nome' => 'Helena', 'img' => 'helena.png'],
                     ['nome' => 'Jéssica', 'img' => 'jessica.png'],
                     ['nome' => 'João Emanoel', 'img' => 'joaoemanoel.png'],
