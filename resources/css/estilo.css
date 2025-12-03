@@ -595,91 +595,195 @@ main {
 }
 
 
-/* equipe cepetz 2025 */
+/* ============================================
+   ESTILIZAÇÃO DA PÁGINA DE EQUIPE - CEPETz
+   ============================================ */
 
-/* Título principal */
-.titulo-equipe {
-    color: #e6773d;
-    font-size: 4rem;
-    margin-top: 4rem;
-    letter-spacing: 1px;
-    font-family: 'Jua';
+/* Cores do projeto */
+:root {
+    --laranja: #e6773d;
+    --azul-escuro: #00285b;
+    --laranja-claro: #f7905c;
 }
 
-/* Cards individuais */
-.card-equipe {
-    background: transparent;
+/* Fundo da página */
+.equipe-section {
+    background-color: #f5f5f5;
+    padding-bottom: 50px;
+}
+
+/* Cabeçalho com título */
+.equipe-hero {
+    background: linear-gradient(to right, #00285b, #004080);
+    padding: 60px 0;
+    margin-bottom: 50px;
+}
+
+.titulo-equipe {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    margin-bottom: 10px;
+}
+
+.subtitulo-equipe {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+}
+
+/* Foto da equipe completa */
+.foto-equipe-completa {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+.foto-equipe-completa img {
+    width: 100%;
+    border: 4px solid #f7905c;
+}
+
+/* Títulos das seções (Coordenação, Bolsistas, Voluntários) */
+.categoria-titulo {
+    color: #00285b;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.categoria-titulo i {
+    color: #f7905c;
+    margin-right: 10px;
+}
+
+/* Cards dos membros */
+.card-membro {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
-    padding: 10px;
+    height: 100%;
 }
 
-.card-equipe:hover {
-    transform: translateY(-8px);
+.card-membro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Foto circular */
-.foto-equipe {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 10px;
+/* Fotos dos membros */
+.foto-membro {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #f7905c;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.foto-equipe25 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.foto-equipe25 img {
-    width: 150%;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 4px solid #f7905c;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.foto-equipe img {
+.foto-membro img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-.card-equipe:hover .foto-equipe img {
-    transform: scale(1.3);
+.card-membro:hover .foto-membro img {
+    transform: scale(1.1);
 }
 
-/* Cargos e nomes */
-.cargo-equipe {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #f7905c !important;
-    letter-spacing: 1px;
-
+/* Cores diferentes para cada função */
+.card-membro.coordenadora .foto-membro {
+    border-color: #e6773d;
 }
 
-.nome-equipe {
-    font-weight: 600;
+.card-membro.bolsista .foto-membro {
+    border-color: #3498db;
+}
+
+.card-membro.voluntario .foto-membro {
+    border-color: #e74c3c;
+}
+
+/* Badge do cargo */
+.cargo-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.coordenadora-cargo {
+    background-color: #e6773d;
+}
+
+.bolsista-cargo {
+    background-color: #3498db;
+}
+
+.voluntario-cargo {
+    background-color: #e74c3c;
+}
+
+/* Nome do membro */
+.nome-membro {
+    font-weight: bold;
     color: #00285b;
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-/* Responsividade */
+/* Espaçamento entre seções */
+.secao-categoria {
+    margin-bottom: 50px;
+}
+
+/* Responsivo para tablets */
 @media (max-width: 768px) {
-    .foto-equipe {
-        width: 160px;
-        height: 160px;
+    .titulo-equipe {
+        font-size: 2rem;
+    }
+
+    .subtitulo-equipe {
+        font-size: 1rem;
+    }
+
+    .foto-membro {
+        width: 140px;
+        height: 140px;
+    }
+
+    .categoria-titulo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 576px) {
+    .equipe-hero {
+        padding: 40px 0;
     }
 
     .titulo-equipe {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+
+    .foto-membro {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-membro {
+        padding: 20px;
     }
 }
 
@@ -693,6 +797,413 @@ main {
 
 }
 
+/* ============================================
+   ESTILIZAÇÃO DA PÁGINA SOBRE - CEPETz
+   ============================================ */
+
+/* Cores */
+:root {
+    --laranja: #e6773d;
+    --azul-escuro: #00285b;
+    --laranja-claro: #f7905c;
+}
+
+/* Fundo da página */
+.sobre-section {
+    background-color: #f8f9fa;
+}
+
+/* Cabeçalho */
+.sobre-hero {
+    background: linear-gradient(to right, #00285b, #004080);
+    padding: 60px 0;
+    margin-bottom: 50px;
+}
+
+.titulo-sobre {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    margin-bottom: 10px;
+}
+
+.subtitulo-sobre {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+}
+
+/* Cards de conteúdo */
+.sobre-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+/* Ícone de destaque */
+.icone-destaque {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #e6773d, #f7905c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icone-destaque i {
+    font-size: 3.5rem;
+    color: white;
+}
+
+/* Títulos das seções */
+.secao-titulo {
+    color: #00285b;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.secao-titulo-principal {
+    color: #00285b;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Texto */
+.texto-sobre {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.texto-sobre strong {
+    color: #e6773d;
+}
+
+.texto-sobre-destaque {
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ano-2022 {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.ano-2023 {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.ano-2024 {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.ano-2025 {
+    background: linear-gradient(135deg, #e6773d, #f7905c);
+}
+
+.ano-titulo {
+    color: #00285b;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Subtítulos dos cards */
+.subtitulo-card {
+    color: #e6773d;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.subtitulo-card i {
+    margin-right: 8px;
+}
+
+.subtitulo-card-principal {
+    color: #00285b;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subtitulo-card-principal i {
+    color: #e6773d;
+    margin-right: 10px;
+}
+
+.mini-titulo {
+    color: #00285b;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.mini-titulo i {
+    color: #e6773d;
+    margin-right: 5px;
+}
+
+/* Listas de ações */
+.lista-acoes {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-acoes li {
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #555;
+}
+
+.lista-acoes li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e6773d;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Card especial 2025 */
+.destaque-2025 {
+    background: linear-gradient(to bottom, #fff 0%, #fff8f5 100%);
+    border: 3px solid #f7905c;
+}
+
+/* Card de Missão */
+.missao-card {
+    background: linear-gradient(135deg, #00285b 0%, #004080 100%);
+    color: white;
+}
+
+.missao-card .secao-titulo-principal {
+    color: white;
+}
+
+.icone-missao {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.icone-missao i {
+    font-size: 3rem;
+    color: white;
+}
+
+.objetivo-box {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.objetivo-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.objetivo-box i {
+    font-size: 2.5rem;
+    color: #f7905c;
+    margin-bottom: 15px;
+}
+
+.objetivo-box h5 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.objetivo-box p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Call to Action */
+.cta-section {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-titulo {
+    color: #00285b;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cta-texto {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-cepetz {
+    background: linear-gradient(135deg, #e6773d, #f7905c);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-cepetz:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 119, 61, 0.4);
+    color: white;
+}
+
+.btn-cepetz i {
+    margin-right: 8px;
+}
+
+.btn-cepetz-outline {
+    background: transparent;
+    border: 2px solid #e6773d;
+    color: #e6773d;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-cepetz-outline:hover {
+    background: #e6773d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 119, 61, 0.4);
+}
+
+.btn-cepetz-outline i {
+    margin-right: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .titulo-sobre {
+        font-size: 2rem;
+    }
+
+    .subtitulo-sobre {
+        font-size: 1rem;
+    }
+
+    .sobre-card {
+        padding: 25px;
+    }
+
+    .secao-titulo {
+        font-size: 1.6rem;
+    }
+
+    .secao-titulo-principal {
+        font-size: 2rem;
+    }
+
+    .ano-titulo {
+        font-size: 1.5rem;
+    }
+
+    .timeline-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .cta-titulo {
+        font-size: 1.8rem;
+    }
+
+    .cta-texto {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-cepetz,
+    .btn-cepetz-outline {
+        width: 100%;
+        margin: 5px 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .sobre-hero {
+        padding: 40px 0;
+    }
+
+    .titulo-sobre {
+        font-size: 1.8rem;
+    }
+
+    .icone-destaque {
+        width: 90px;
+        height: 90px;
+    }
+
+    .icone-destaque i {
+        font-size: 2.5rem;
+    }
+
+    .texto-sobre {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
 
 /*sitio*/
 

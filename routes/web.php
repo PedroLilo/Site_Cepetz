@@ -9,6 +9,7 @@ Route::get('/', [NoticiaController::class, 'index'])->name('inicio');
 Route::get('/cepetz/logar', function () {return view('logar'); })->name('logar');
 Route::post('/logar', [controllerCepetz::class, 'logar'])->name('logarUsuario');
 
+Route::get('/cepetz/sobre', function () {return view('sobre'); })->name('sobre');
 Route::get('/cepetz/equipe', function () {return view('equipe'); })->name('equipe');
 Route::get('/cepetz/animais', function () {return view('animais'); })->name('animais');
 

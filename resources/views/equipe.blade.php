@@ -1,50 +1,79 @@
 @extends('layout')
 
 @section('content')
-<div class="container-fluid equipe-bg py-5">
-    <div class="container text-center">
-        <h1 class="fw-bold titulo-equipe mb-5">Equipe CEPETz 2025</h1>
+<div class="equipe-section">
+    <!-- Cabeçalho -->
+    <div class="equipe-hero">
+        <div class="container text-center">
+            <h1 class="titulo-equipe">Equipe CEPETz 2025</h1>
+            <p class="subtitulo-equipe">Conheça quem faz o CEPETz acontecer</p>
+        </div>
+    </div>
 
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-6">
-                <div class="foto-equipe25">
+    <div class="container">
+        <!-- Foto da Equipe Completa -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="foto-equipe-completa">
                     <img src="{{ asset('storage/images/equipe2025.jpg') }}" alt="Equipe 2025">
                 </div>
             </div>
         </div>
 
-        <div class="row justify-content-center g-4">
+        <!-- Coordenação -->
+        <div class="secao-categoria">
+            <h2 class="categoria-titulo">
+                <i class="bi bi-star-fill"></i> Coordenação
+            </h2>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="card-equipe">
-                    <div class="foto-equipe">
-                        <img src="{{ asset('storage/images/erikakress.png') }}" alt="Erika Kress">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card-membro coordenadora">
+                        <div class="foto-membro">
+                            <img src="{{ asset('storage/images/erikakress.png') }}" alt="Erika Kress">
+                        </div>
+                        <span class="cargo-badge coordenadora-cargo">Coordenadora</span>
+                        <h5 class="nome-membro">Erika Kress</h5>
                     </div>
-                    <h6 class="cargo-equipe text-uppercase text-warning">Coordenadora</h6>
-                    <h5 class="nome-equipe">Erika Kress</h5>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="card-equipe">
-                    <div class="foto-equipe">
-                        <img src="{{ asset('storage/images/anavitoria.png') }}" alt="Ana Vitória">
+        <!-- Bolsistas -->
+        <div class="secao-categoria">
+            <h2 class="categoria-titulo">
+                <i class="bi bi-award-fill"></i> Bolsistas
+            </h2>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="card-membro bolsista">
+                        <div class="foto-membro">
+                            <img src="{{ asset('storage/images/anavitoria.png') }}" alt="Ana Vitória">
+                        </div>
+                        <span class="cargo-badge bolsista-cargo">Bolsista</span>
+                        <h5 class="nome-membro">Ana Vitória</h5>
                     </div>
-                    <h6 class="cargo-equipe text-uppercase text-warning">Bolsista</h6>
-                    <h5 class="nome-equipe">Ana Vitória</h5>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card-membro bolsista">
+                        <div class="foto-membro">
+                            <img src="{{ asset('storage/images/anita.png') }}" alt="Anita">
+                        </div>
+                        <span class="cargo-badge bolsista-cargo">Bolsista</span>
+                        <h5 class="nome-membro">Anita</h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="card-equipe">
-                    <div class="foto-equipe">
-                        <img src="{{ asset('storage/images/anita.png') }}" alt="Anita">
-                    </div>
-                    <h6 class="cargo-equipe text-uppercase text-warning">Bolsista</h6>
-                    <h5 class="nome-equipe">Anita</h5>
-                </div>
-            </div>
+        </div>
 
-            
+        <!-- Voluntários -->
+        <div class="secao-categoria">
+            <h2 class="categoria-titulo">
+                <i class="bi bi-heart-fill"></i> Voluntários
+            </h2>
+
             @php
                 $voluntarios = [
                     ['nome' => 'Amanda Gabriela', 'img' => 'amandagabriela.png'],
@@ -67,17 +96,19 @@
                 ];
             @endphp
 
-            @foreach ($voluntarios as $v)
-                <div class="col-md-4 col-sm-6">
-                    <div class="card-equipe">
-                        <div class="foto-equipe">
-                            <img src="{{ asset('storage/images/' . $v['img']) }}" alt="{{ $v['nome'] }}">
+            <div class="row g-4">
+                @foreach ($voluntarios as $v)
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card-membro voluntario">
+                            <div class="foto-membro">
+                                <img src="{{ asset('storage/images/' . $v['img']) }}" alt="{{ $v['nome'] }}">
+                            </div>
+                            <span class="cargo-badge voluntario-cargo">Voluntário</span>
+                            <h5 class="nome-membro">{{ $v['nome'] }}</h5>
                         </div>
-                        <h6 class="cargo-equipe text-uppercase text-warning">Voluntário</h6>
-                        <h5 class="nome-equipe">{{ $v['nome'] }}</h5>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 </div>

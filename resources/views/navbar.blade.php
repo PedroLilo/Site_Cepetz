@@ -8,7 +8,7 @@
         <a class="navA" href="/cepetz/cinoterapia">Cinoterapia</a>
 
         <div class="dropdown">
-            <a class="navA dropbtn" href="#">Quem Somos</a>
+            <a class="navA dropbtn" href="/cepetz/sobre">Quem Somos</a>
             <div class="dropdown-content">
                 <a href="/cepetz/equipe">Nossa Equipe</a>
                 <a href="/cepetz/animais">Nossos Pets</a>
