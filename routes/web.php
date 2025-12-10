@@ -18,5 +18,8 @@ Route::get('/cepetz/cinoterapia', function () {return view('cinoterapia'); })->n
 
 /* somente adm's */
 Route::get('/cepetz/cadastro', function () {return view('cadastrar'); })->name('cadastrar');
-
+Route::get('/cepetz/gerenciamento', [NoticiaController::class, 'gerenciar']);
+Route::delete('/cepetz/excluir/{id}', [NoticiaController::class, 'excluir']);
 Route::post('/cadastrarnoticia', [NoticiaController::class, 'store'])->name('cadastrarnoticia');
+Route::get('/editarnoticia/{id}', [NoticiaController::class, 'editar'])->name('editar');
+Route::post('/atualizarnoticia/{id}', [NoticiaController::class, 'atualizar'])->name('atualizarnoticia');
