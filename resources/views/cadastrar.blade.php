@@ -8,14 +8,6 @@
             @csrf
 
             <div class="mb-3">
-                <label for="tipocadastro" class="form-label fw-semibold">O que deseja cadastrar?</label>
-                <select class="form-select input-style" name="tipocadastro" id="tipocadastro">
-                    <option value="tiponoticia">Notícia</option>
-                    <option value="tipocinoterapia">Pesquisa Cinoterapia</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
                 <label for="titulocadastro" class="form-label fw-semibold">Título</label>
                 <input type="text" class="form-control input-style" id="titulocadastro" name="titulocadastro" placeholder="Digite o título" required>
             </div>
@@ -43,14 +35,11 @@
     </div>
 </div>
 
-<!-- Quill Editor CSS -->
+<!-- quill editor css e js -->
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
-<!-- Quill Editor JS -->
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 <script>
-    // Inicializar o editor Quill
     var quill = new Quill('#editor', {
         theme: 'snow',
         placeholder: 'Digite a descrição da notícia...',
@@ -67,7 +56,6 @@
         }
     });
 
-    // Salvar o conteúdo do editor no campo hidden antes de enviar
     document.getElementById('formCadastro').onsubmit = function() {
         var html = quill.root.innerHTML;
         document.getElementById('descricaocadastro').value = html;

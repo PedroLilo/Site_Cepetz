@@ -6,25 +6,37 @@
         <h1 class="text-center mb-4 text-light">Editar Notícia</h1>
         <form action="{{ route('atualizarnoticia', $noticia->id) }}" method="POST" enctype="multipart/form-data" id="formCadastro">
             @csrf
-            @method('POST')  <!-- Caso precise utilizar PUT ou PATCH -->
 
             <div class="mb-3">
-                <label for="tipocadastro" class="form-label fw-semibold">O que deseja cadastrar?</label>
-                <select class="form-select input-style" name="tipocadastro" id="tipocadastro">
-                    <option value="tiponoticia" {{ $noticia->tipocadastro == 'tiponoticia' ? 'selected' : '' }}>Notícia</option>
-                    <option value="tipocinoterapia" {{ $noticia->tipocadastro == 'tipocinoterapia' ? 'selected' : '' }}>Pesquisa Cinoterapia</option>
-                </select>
-            </div>
+                <label for="titulo" class="form-label fw-semibold">Título</label>
+                    <input 
+                        type="text" 
+                        class="form-control input-style" 
+                        id="titulo" 
+                        name="titulo" 
+                        value="{{ old('titulo', $noticia->titulo ?? $noticia->titulo ?? '') }}"
+                        placeholder="Digite o título"
+                        required
+                    ></div>
 
             <div class="mb-3">
-                <label for="titulocadastro" class="form-label fw-semibold">Título</label>
-                <input type="text" class="form-control input-style" value="{{ $noticia->titulocadastro }}" id="titulocadastro" name="titulocadastro" placeholder="Digite o título" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="descricaocadastro" class="form-label fw-semibold">Descrição</label>
-                <div id="editor" style="height: 300px; background: white; border-radius: 0px;"></div>
-                <input type="hidden" name="descricaocadastro" id="descricaocadastro" value="{{ $noticia->descricaocadastro }}">
+                                <div class="form-group-cadastro">
+                    <label for="descricao" class="label-cadastro">
+                        Descrição
+                    </label>
+                    <div class="editor-wrapper">
+                        <div 
+                            class="editor-content" 
+                            id="editor" 
+                        >{!! old('descricao', $noticia->descricao ?? $noticia->descricao ?? '') !!}</div>
+                        <textarea 
+                            name="descricao" 
+                            id="descricao" 
+                            style="display: none;" 
+                            required
+                        >{{ old('descricao', $noticia->descricao ?? $noticia->descricao ?? '') }}</textarea>
+                    </div>
+                </div>
             </div>
 
             <div class="mb-3">
@@ -33,11 +45,23 @@
             </div>
 
             <div class="mb-4">
-                <label for="imagemcadastro" class="form-label fw-semibold">Imagem</label>
-                <input class="form-control input-style" type="file" id="imagemcadastro" name="imagemcadastro" accept="image/*">
-                @if($noticia->imagemcadastro)
-                    <img src="{{ asset('storage/'.$noticia->imagemcadastro) }}" alt="Imagem cadastrada" class="mt-2" width="150px">
-                @endif
+                <label for="imagem" class="form-label fw-semibold">Imagem</label>
+                @if(isset($noticia->imagem) || isset($noticia->imagem))
+                        <div class="imagem-atual">
+                            <img src="{{ asset('storage/' . ($noticia->imagem ?? $noticia->imagem)) }}" 
+                                 alt="Imagem atual" 
+                                 class="mt-2">
+                            <p class="texto-substituir">Selecione uma nova imagem para substituir</p>
+                        </div>
+                    @endif
+                    
+                    <input 
+                        type="file" 
+                        class="form-control input-style" 
+                        id="imagem" 
+                        name="imagem" 
+                        accept="image/*"
+                    >
             </div>
 
             <div class="text-end">
@@ -47,14 +71,12 @@
     </div>
 </div>
 
-<!-- Quill Editor CSS -->
+<!-- quill editor css e js -->
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
-<!-- Quill Editor JS -->
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 <script>
-    // Inicializar o editor Quill
     var quill = new Quill('#editor', {
         theme: 'snow',
         placeholder: 'Digite a descrição da notícia...',
@@ -71,14 +93,12 @@
         }
     });
 
-    // Carregar o conteúdo da descrição no editor
-    var descricao = document.getElementById('descricaocadastro').value;
+    var descricao = document.getElementById('descricao').value;
     quill.root.innerHTML = descricao;
 
-    // Salvar o conteúdo do editor no campo hidden antes de enviar
     document.getElementById('formCadastro').onsubmit = function() {
         var html = quill.root.innerHTML;
-        document.getElementById('descricaocadastro').value = html;
+        document.getElementById('descricao').value = html;
     };
 </script>
 @endsection

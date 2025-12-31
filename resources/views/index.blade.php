@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="container com-margem">
+<div class="container">
     <div class="noticias-grid">
 
         @foreach ($noticias as $noticia)
@@ -26,7 +26,6 @@
             </div>
         </div>
 
-        <!-- Modal -->
         <div class="modal fade" id="modal{{ $noticia->id }}" tabindex="-1" aria-labelledby="modalLabel{{ $noticia->id }}" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">

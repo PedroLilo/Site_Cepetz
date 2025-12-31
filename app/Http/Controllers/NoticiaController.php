@@ -103,35 +103,35 @@ class NoticiaController extends Controller
 
 
     public function atualizar(Request $request, $id)
-    {
-        $noticia = Noticia::find($id);  // Encontre a notícia pelo ID
-        if (!$noticia) {
-            return redirect()->route('home')->with('error', 'Notícia não encontrada.');
+{
+    $noticia = Noticia::findOrFail($id);
+
+    // Validação de dados
+    $request->validate([
+        'titulo' => 'required|string|max:255',
+        'descricao' => 'required|string',
+        'autor' => 'required|string|max:255',
+        'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
+    // Atualizar os campos
+    $noticia->titulo = $request->titulo;
+    $noticia->descricao = $request->descricao;
+    $noticia->autor = $request->autor;
+
+    // Se houver uma nova imagem
+    if ($request->hasFile('imagem')) {
+        // Remove a imagem antiga se existir
+        if ($noticia->imagem) {
+            Storage::delete('public/' . $noticia->imagem);
         }
-
-        // Validação de dados
-        $request->validate([
-            'tipocadastro' => 'required',
-            'titulocadastro' => 'required',
-            'descricaocadastro' => 'required',
-            'autor' => 'required',
-            'imagemcadastro' => 'nullable|image',
-        ]);
-
-        // Atualizar os campos
-        $noticia->tipocadastro = $request->tipocadastro;
-        $noticia->titulocadastro = $request->titulocadastro;
-        $noticia->descricaocadastro = $request->descricaocadastro;
-        $noticia->autor = $request->autor;
-
-        // Se houver uma nova imagem
-        if ($request->hasFile('imagemcadastro')) {
-            $imagemPath = $request->file('imagemcadastro')->store('imagens', 'public');
-            $noticia->imagemcadastro = $imagemPath;
-        }
-
-        $noticia->save();
-
-        return redirect()->route('home')->with('success', 'Notícia atualizada com sucesso.');
+        
+        $imagemPath = $request->file('imagem')->store('noticias', 'public');
+        $noticia->imagem = $imagemPath;
     }
+
+    $noticia->save();
+
+    return redirect()->route('inicio')->with('success', 'Notícia atualizada com sucesso!');
+}
 }
