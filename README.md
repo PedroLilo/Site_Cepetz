@@ -17,13 +17,30 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
+      <a href="https://github.com/GioEvaristo" title="Perfil da Giovanna Evaristo">
+        <img src="https://github.com/GioEvaristo.png" width="300px;" alt="Foto da Giovanna Evaristo no GitHub"/><br>
+        <sub>
+          <b>Giovanna Evaristo</b>
+        </sub>
+      </a>
+    </td>
+      </td>
+      <td align="center">
+      <a href="https://github.com/reisbraga" title="Perfil da Julia Garcia">
+        <img src="https://github.com/reisbraga.png" width="300px;" alt="Foto da Julia Garcia no GitHub"/><br>
+        <sub>
+          <b>Julia Garcia</b>
+        </sub>
+      </a>
+    </td>
+      <td align="center">
       <a href="https://github.com/PedroLilo" title="Perfil do Pedro Lilo">
-        <img src="https://github.com/PedroLilo.png" width="100px;" alt="Foto do Pedro Lilo no GitHub"/><br>
+        <img src="https://github.com/PedroLilo.png" width="300px;" alt="Foto do Pedro Lilo no GitHub"/><br>
         <sub>
           <b>Pedro Lilo</b>
         </sub>
       </a>
-    </td>
+    
   </tr>
 </table>
 Varginha, 2025
