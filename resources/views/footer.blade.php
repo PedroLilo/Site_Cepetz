@@ -38,4 +38,8 @@
         <p>Av. dos Imigrantes, 1000 – Jardim Panorama, Varginha - MG, 37022-560</p>
         <p>Telefone: (35) 3690-4200</p>
     </div>
+
+    <div>
+        <a class="navA" href="{{ route('admin.login') }}">Login Admin</a>
+    </div>
 </footer>

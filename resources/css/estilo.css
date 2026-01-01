@@ -374,32 +374,33 @@ main {
 }
 
 .logarcard {
-    background-color: #042d5c;
+    background-color: #fff59c;
     padding: 30px;
     margin-top: 15rem !important;
     margin-bottom: 10rem !important;
     border-radius: 30px;
-    width: 300px;
+    width: 40rem;
     text-align: center;
+    border: 3px solid #7293f6;
 }
 
 .logarcard h4 {
-    color: #7fb7ff;
+    color: #433636;
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 40px;
 }
 
 .logarcard input[type="text"],
 .logarcard input[type="email"],
 .logarcard input[type="password"] {
-    background-color: #7fb7ff;
+    background-color: #a5ff7f78;
     border: none;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 12px 18px;
     margin-bottom: 15px;
     width: 100%;
     color: #4a4a4a;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 .logarcard input::placeholder {
@@ -408,17 +409,14 @@ main {
 }
 
 .logarcard button {
-    background-color: #f99064;
+    background-color: #ffa42d;
     color: white;
     border: none;
     padding: 10px 25px;
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.logarcard button:hover {
-    background-color: #e87c4d;
+    font-size: 1.5rem;
 }
 
 .nav-links {
@@ -1795,23 +1793,10 @@ main {
 .logarcard .form-check-label {
     color: #7fb7ff;
     font-size: 0.9rem;
-}
+} 
 
-/* Links nos formulários admin */
-.logarcard a {
-    color: #7fb7ff;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.logarcard a:hover {
-    color: #5a9ae0;
-    text-decoration: underline;
-}
-
-/* Badge de admin logado (opcional) */
 .admin-badge {
-    background-color: #f99064;
+    background-color: #64d1f9;
     color: white;
     padding: 5px 12px;
     border-radius: 15px;
@@ -1821,7 +1806,6 @@ main {
     margin-left: 10px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .btn-nav-logout {
         padding: 6px 15px;

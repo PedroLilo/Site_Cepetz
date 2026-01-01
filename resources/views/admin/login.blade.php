@@ -42,12 +42,6 @@
             <div class="EntrarBut">
                 <button type="submit" class="btn btn-outline-primary btn-sm">Entrar</button>
             </div>
-            
-            <div class="text-center mt-3">
-                <a href="{{ route('admin.register') }}" style="color: #7fb7ff; text-decoration: none; font-size: 0.9rem;">
-                    Não tem conta? Cadastre-se
-                </a>
-            </div>
         </form>
     </div>
 </div>

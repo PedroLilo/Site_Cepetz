@@ -28,6 +28,7 @@
                         <div 
                             class="editor-content" 
                             id="editor" 
+                            style="background-color: #f8f9fa;"
                         >{!! old('descricao', $noticia->descricao ?? $noticia->descricao ?? '') !!}</div>
                         <textarea 
                             name="descricao" 
