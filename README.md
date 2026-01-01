@@ -4,9 +4,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/PedroLilo/Site_Cepetz?style=for-the-badge&color=ff6b6b)
 ![GitHub language count](https://img.shields.io/github/languages/count/PedroLilo/Site_Cepetz?style=for-the-badge&color=4ecdc4)
-![GitHub forks](https://img.shields.io/github/forks/PedroLilo/Site_Cepetz?style=for-the-badge&color=45b7d1)
-![GitHub open issues](https://img.shields.io/github/issues/PedroLilo/Site_Cepetz?style=for-the-badge&color=f9ca24)
-![GitHub open pull requests](https://img.shields.io/github/issues-pr/PedroLilo/Site_Cepetz?style=for-the-badge&color=6c5ce7)
 
 <img src="public/storage/images/logo.png" alt="CEPETz">
 
