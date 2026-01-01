@@ -6,7 +6,6 @@
     <div class="nav-links">
         <a class="navA" href="/">Inicio</a>
         <a class="navA" href="/cepetz/cinoterapia">Cinoterapia</a>
-
         <div class="dropdown">
             <a class="navA dropbtn" href="/cepetz/sobre">Quem Somos</a>
             <div class="dropdown-content">
@@ -14,10 +13,14 @@
                 <a href="/cepetz/animais">Nossos Pets</a>
             </div>
         </div>
-
         <a class="navA" href="/cepetz/apoieSitio">Apoie o Sítio</a>
-        <a class="navA" href="/cepetz/cadastro">Cadastrar Notícia</a>
-        <a class="navA" href="/cepetz/gerenciamento">Gerenciamento</a>
-        <a class="navA" href="/cepetz/logar">Login</a>
+        
+        @if(Auth::guard('admin')->check())
+            <a class="navA" href="/cepetz/gerenciamento">Gerenciamento</a>
+            <form action="{{ route('admin.logout') }}" method="POST" style="display: inline; margin: 0;">
+                @csrf
+                <button type="submit" class="btn-nav-logout">Sair</button>
+            </form>
+        @endif
     </div>
 </nav>

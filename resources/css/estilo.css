@@ -1727,3 +1727,129 @@ main {
         font-size: 1.1rem;
     }
 }
+
+/* Estilos Admin CEPETz */
+
+/* Botão de logout no navbar */
+.btn-nav-logout {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-left: 10px;
+}
+
+.btn-nav-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Alerts personalizados */
+.alert {
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.alert-danger {
+    background-color: rgba(231, 76, 60, 0.15);
+    border: 2px solid #e74c3c;
+    color: #c0392b;
+}
+
+.alert-danger ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.alert-danger li {
+    padding: 5px 0;
+}
+
+.alert-success {
+    background-color: rgba(46, 204, 113, 0.15);
+    border: 2px solid #2ecc71;
+    color: #27ae60;
+}
+
+/* Ajustes no formulário de login/registro admin */
+.logarcard .form-check-input {
+    background-color: #7fb7ff;
+    border: 2px solid #042d5c;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.logarcard .form-check-input:checked {
+    background-color: #042d5c;
+    border-color: #042d5c;
+}
+
+.logarcard .form-check-label {
+    color: #7fb7ff;
+    font-size: 0.9rem;
+}
+
+/* Links nos formulários admin */
+.logarcard a {
+    color: #7fb7ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.logarcard a:hover {
+    color: #5a9ae0;
+    text-decoration: underline;
+}
+
+/* Badge de admin logado (opcional) */
+.admin-badge {
+    background-color: #f99064;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .btn-nav-logout {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links form {
+        width: 100%;
+    }
+    
+    .btn-nav-logout {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .logarcard {
+        margin-top: 80px !important;
+        padding: 20px !important;
+        width: 90% !important;
+    }
+    
+    .logarcard h4 {
+        font-size: 1.3rem;
+    }
+}
