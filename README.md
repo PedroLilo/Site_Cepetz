@@ -5,13 +5,13 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/PedroLilo/Site_Cepetz?style=for-the-badge&color=ff6b6b)
 ![GitHub language count](https://img.shields.io/github/languages/count/PedroLilo/Site_Cepetz?style=for-the-badge&color=4ecdc4)
 
-<img src="public/storage/images/logo.png" alt="CEPETz">
+<img src="https://github.com/user-attachments/assets/c551a505-b639-4f2c-bb30-f48bcb25a325" alt="CEPETz">
 
 Bem-vindo ao portal web do **CEPETz Varginha**! 
 
 Este projeto foi desenvolvido com muito carinho para ser um ponto de encontro digital onde você pode acompanhar todas as atividades, notícias e novidades do CEPETz. Nossa missão é conectar pessoas apaixonadas por animais e facilitar o acesso à informação sobre cuidados, eventos e histórias incríveis de nossos amigos peludos!
 
-## 🤝 Nosso Time de Desenvolvedores
+## Nosso Time de Desenvolvedores
 
 <div align="center">
 
@@ -40,6 +40,33 @@ Este projeto foi desenvolvido com muito carinho para ser um ponto de encontro di
         <img src="https://github.com/PedroLilo.png" width="150px;" alt="Foto do Pedro Lilo"/><br>
         <sub>
           <b>🌟 Pedro Lilo</b><br>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## Agradecimentos especiais
+
+<div align="center">
+
+### 👥 Professores que nos auxiliaram nessa jornada 
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/brunoacre" title="Perfil do Bruno Rezende">
+        <img src="https://github.com/brunoacre.png" width="150px;" alt="Foto do Bruno Rezende"/><br>
+        <sub>
+          <b>🌟 Bruno Rezende</b><br>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MarceloMussel" title="Perfil do MarceloMussel">
+        <img src="https://github.com/MarceloMussel.png" width="150px;" alt="Foto do MarceloMussel"/><br>
+        <sub>
+          <b>🌟 Marcelo Mussel</b><br>
         </sub>
       </a>
     </td>
